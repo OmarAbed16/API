@@ -1,18 +1,64 @@
-<div
-  id="g_id_onload"
-  data-client_id="64384021536-var2c7oqrqf4lk6m90nq54v8d8379aeh.apps.googleusercontent.com"
-  data-context="signin"
-  data-ux_mode="popup"
-  data-callback="auth-info"
-  data-auto_prompt="false"
-></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="monetag" content="4a5ab90247513fcc4e344e64c735198b" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
+  </head>
 
-<div
-  class="g_id_signin"
-  data-type="standard"
-  data-shape="rectangular"
-  data-theme="outline"
-  data-text="signin_with"
-  data-size="large"
-  data-logo_alignment="left"
-></div>
+  <body>
+    <div
+      align="center"
+      style="border: 0.5px solid #0000006e; border-radius: 25px; padding: 69px"
+    >
+      <h1>Login with google</h1>
+      <br />
+      <!--google login button -->
+      <div
+        id="g_id_onload"
+        data-client_id="64384021536-var2c7oqrqf4lk6m90nq54v8d8379aeh.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-callback="auth-info"
+        data-auto_prompt="false"
+      ></div>
+
+      <div
+        class="g_id_signin"
+        data-type="standard"
+        data-shape="rectangular"
+        data-theme="outline"
+        data-text="continue_with"
+        data-size="large"
+        data-logo_alignment="left"
+      ></div>
+      <!--End-->
+    </div>
+
+    <script>
+      function logout(g) {
+        google.accounts.id.revoke(g, () => {
+          console.log("Logout success");
+        });
+      }
+
+      function TF(a) {
+        const decodedToken = jwt_decode(a.credential);
+        console.log(decodedToken);
+        logout(decodedToken.email);
+      }
+    </script>
+
+    <script src="https://accounts.google.com/gsi/client" async></script>
+  </body>
+</html>
