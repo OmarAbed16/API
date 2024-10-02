@@ -1,0 +1,74 @@
+[
+    {
+        "username": "omar",
+        "email": "omarfathiabed",
+        "password": "omar1616",
+        "income": {
+            "data1": {
+
+                "value":75,
+                "type":"monthly",
+                "date":"02-10-2024"
+            },
+            "data2": {
+
+                "value":300,
+                "type":"weakly",
+                "date":"21-09-2024"
+            }
+        },
+        "expensive": {
+            
+            "data1": {
+
+                "value":-150,
+                "type":"monthly",
+                "date":"02-10-2024"
+            },
+            "data2": {
+
+                "value":-80,
+                "type":"weakly",
+                "date":"27-08-2024"
+            }
+
+
+
+        },
+        "saving":
+        {
+"data2": {
+
+                "value":80,
+                "type":"monthly",
+                "date":"01-10-2024"
+            }
+        }
+    },
+    {
+        "username": "user2",
+        "email": "user2@example.com",
+        "password": "password2",
+        "income": {
+            "data1": 7000,
+            "data2": 3000
+        },
+        "expensive": {
+            "data1": 1200,
+            "data2": 600
+        }
+    },
+    {
+        "username": "user3",
+        "email": "user3@example.com",
+        "password": "password3",
+        "income": {
+            "data1": 4500,
+            "data2": 2500
+        },
+        "expensive": {
+            "data1": 1000,
+            "data2": 400
+        }
+    }
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/face.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <title>Signin & Sign up</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="form-container sign-up">
+        <form onsubmit="logup(event)" action="#">
+          <h2>sign up</h2>
+          <div class="form-group">
+            <input id="signup-us" type="text" required />
+            <i class="fas fa-user"></i>
+            <label for="">username</label>
+          </div>
+          <div class="form-group">
+            <input id="signup-em" type="email" required />
+            <i class="fas fa-at"></i>
+            <label for="">email</label>
+          </div>
+          <div class="form-group">
+            <input id="signup-pw" type="password" required />
+            <i class="fas fa-lock"></i>
+            <label for="">password</label>
+          </div>
+          <div class="form-group">
+            <input id="signup-pwm" type="password" required />
+            <i class="fas fa-lock"></i>
+            <label for="">confirm password</label>
+          </div>
+          <button id="signup" type="submit" class="btn">sign up</button>
+          <div class="link">
+            <p class="error up-error"></p>
+
+            <p>
+              You already have an account?<a href="#" class="signin-link">
+                sign in</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form onsubmit="login(event)" action="#">
+          <h2>login</h2>
+          <div class="form-group">
+            <input id="login-em" type="text" required />
+            <i class="fas fa-user"></i>
+            <label for="">Email</label>
+          </div>
+          <div class="form-group">
+            <input id="login-pw" type="password" required />
+            <i class="fas fa-lock"></i>
+            <label for="">password</label>
+          </div>
+          <!-- <div class="forgot-pass">
+            <a href="#">forgot password?</a>
+          </div> -->
+          <button type="submit" class="btn">login</button>
+          <div class="link">
+            <p class="error lg-error"></p>
+            <p>
+              Don't have an account?<a href="#" class="signup-link"> sign up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/9e5ba2e3f5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

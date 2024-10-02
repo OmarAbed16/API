@@ -1,0 +1,5 @@
+@media(min-width: 540px) {
+    .wrapper {
+        width: 40rem;
+    }
+}
