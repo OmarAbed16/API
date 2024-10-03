@@ -109,9 +109,7 @@ function logout(g) {
   });
 }
 
-function auth_info(a, c) {
-  console.log(c);
-
+function auth_info(a) {
   console.log(a, "1");
   console.log(a.credential, "2");
   const decodedToken = jwt_decode(a.credential);
