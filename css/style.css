@@ -145,6 +145,8 @@ form .form-group input:valid~i {
     font-size: 1.4rem;
     color: var(--labelColor);
     margin: 2.5rem 0;
+    display: grid;
+    justify-content: center;
 }
 
 .wrapper .form-container form .link a {
@@ -159,6 +161,9 @@ form .form-group input:valid~i {
     color: var(--secondColor);
 }
 
+.google-login{
+    margin: 3rem 0;
+}
 .wrapper .sign-up {
     transform: rotate(7deg);
 }
