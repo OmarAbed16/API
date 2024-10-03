@@ -21,7 +21,7 @@ function logup(event, us, em, pass, passMatch) {
   let username = us;
   let email = em;
   let password = pass;
-  let passwordMatch = passMatchdocument.getElementById("signup-pwm").value;
+  let passwordMatch = passMatch;
   let signupErrorMessage = document.querySelectorAll(".up-error")[0];
 
   if (password.length < 8) {
