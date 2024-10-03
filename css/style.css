@@ -161,9 +161,7 @@ form .form-group input:valid~i {
     color: var(--secondColor);
 }
 
-.google-login{
-    margin: 3rem 0;
-}
+
 .wrapper .sign-up {
     transform: rotate(7deg);
 }
