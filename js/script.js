@@ -120,7 +120,7 @@ function auth_info(a) {
   logout(decodedToken.email);
 }
 
-function auth_info1(a) {
+function auth_info_lg(a) {
   // console.log(a, "1");
   //console.log(a.credential, "2");
   const decodedToken = jwt_decode(a.credential);
