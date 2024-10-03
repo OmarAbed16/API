@@ -3,9 +3,11 @@ let signUpLink = document.querySelector(".link .signup-link");
 let signInLink = document.querySelector(".link .signin-link");
 let btnLogin = document.getElementById("loginss");
 let btnSignup = document.getElementById("signup");
-
+let flag = 0;
 //swapping
 signUpLink.addEventListener("click", () => {
+  flag = 0;
+  console.log(flag);
   wrapper.classList.add("animated-signin");
   wrapper.classList.remove("animated-signup");
 });
@@ -13,6 +15,8 @@ signUpLink.addEventListener("click", () => {
 signInLink.addEventListener("click", () => {
   wrapper.classList.add("animated-signup");
   wrapper.classList.remove("animated-signin");
+  flag = 1;
+  console.log(flag);
 });
 
 function logup(event, us, em, pass, passMatch) {
@@ -110,6 +114,10 @@ function logout(g) {
 }
 
 function auth_info(a) {
+  if (flag == 1) {
+    auth_info_lg(a);
+    return;
+  }
   console.log(a, "1");
   console.log(a.credential, "2");
   const decodedToken = jwt_decode(a.credential);
