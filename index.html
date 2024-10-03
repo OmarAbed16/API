@@ -66,9 +66,39 @@
           <button type="submit" class="btn">login</button>
           <div class="link">
             <p class="error lg-error"></p>
-            <p>
-              Don't have an account?<a href="#" class="signup-link"> sign up</a>
-            </p>
+           
+
+<!--google login start-->
+            <div
+            id="g_id_onload"
+            data-client_id="64384021536-var2c7oqrqf4lk6m90nq54v8d8379aeh.apps.googleusercontent.com"
+            data-context="signin"
+            data-ux_mode="popup"
+            data-callback="auth_info"
+            data-auto_prompt="false"
+          ></div>
+    
+          <div
+            class="g_id_signin"
+            data-type="standard"
+            data-shape="rectangular"
+            data-theme="outline"
+            data-text="continue_with"
+            data-size="large"
+            data-logo_alignment="left"
+          ></div>
+          <!--google login End-->
+
+          <p>
+            Don't have an account?<a href="#" class="signup-link"> sign up</a>
+          </p>
+
+          
+        </div>
+
+        
+
+
           </div>
         </form>
       </div>
@@ -78,5 +108,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
+    <script src="js/google.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
   </body>
 </html>
