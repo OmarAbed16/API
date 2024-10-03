@@ -5,7 +5,17 @@ function logout(g) {
 }
 
 function auth_info(a) {
+  console.log(a, "1");
+  console.log(a.credential, "2");
   const decodedToken = jwt_decode(a.credential);
-  console.log(decodedToken);
+  console.log(decodedToken, "3");
+  console.log(
+    decodedToken.name,
+    decodedToken.email,
+    decodedToken.email,
+    decodedToken.email,
+    "4"
+  );
+
   logout(decodedToken.email);
 }
