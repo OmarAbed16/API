@@ -161,7 +161,9 @@ form .form-group input:valid~i {
     color: var(--secondColor);
 }
 
-
+.g_id_signin{
+    margin: 0.5rem auto;
+}
 .wrapper .sign-up {
     transform: rotate(7deg);
 }
