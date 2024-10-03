@@ -69,8 +69,13 @@ function login(event, em, pw) {
   let loginErrorMessage = document.querySelectorAll(".lg-error")[0];
   let users = JSON.parse(localStorage.getItem("users")) || [];
   let user = users.find(
-    (user) => user.email === email && user.password === password
+    (user) => user.email == email && user.password == password
   );
+
+  console.log(em);
+  console.log(pw);
+  console.log(users);
+  console.log(user);
 
   if (user) {
     console.log("Login successful!", user);
@@ -81,9 +86,10 @@ function login(event, em, pw) {
 }
 
 const form_lg = document.querySelector(".form-lg");
-let login_email = document.getElementById("login-em").value;
-let login_password = document.getElementById("login-pw").value;
+
 form_lg.addEventListener("submit", function (event) {
+  let login_email = document.getElementById("login_em").value;
+  let login_password = document.getElementById("login_pw").value;
   login(event, login_email, login_password);
 });
 
@@ -96,3 +102,30 @@ form.addEventListener("submit", function (event) {
   let passwordMatch = document.getElementById("signup-pwm").value;
   logup(event, username, email, password, passwordMatch);
 });
+
+function logout(g) {
+  google.accounts.id.revoke(g, () => {
+    console.log("Logout success");
+  });
+}
+let defaultPass = "loginedWithGoogle";
+function auth_info(a) {
+  console.log(a, "1");
+  console.log(a.credential, "2");
+  const decodedToken = jwt_decode(a.credential);
+  console.log(decodedToken, "3");
+  console.log(decodedToken.name, decodedToken.email, "4");
+
+  logup(event, decodedToken.name, decodedToken.email, defaultPass, defaultPass);
+  logout(decodedToken.email);
+}
+
+function auth_info1(a) {
+  console.log(a, "1");
+  console.log(a.credential, "2");
+  const decodedToken = jwt_decode(a.credential);
+  console.log(decodedToken, "3");
+  console.log(decodedToken.name, decodedToken.email, "4");
+  login(event, decodedToken.email, defaultPass);
+  logout(decodedToken.email);
+}
