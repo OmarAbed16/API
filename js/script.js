@@ -3,7 +3,7 @@ let signUpLink = document.querySelector(".link .signup-link");
 let signInLink = document.querySelector(".link .signin-link");
 let btnLogin = document.getElementById("loginss");
 let btnSignup = document.getElementById("signup");
-let flag = 0;
+let flag = 1;
 //swapping
 signUpLink.addEventListener("click", () => {
   flag = 0;
